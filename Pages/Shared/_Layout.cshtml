@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Movie</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RazorPagesMovies.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.0/dist/full.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+    <header>
+        <nav class="navbar bg-primary text-primary-content">
+            <div class="container flex justify-center">
+                <a class="btn btn-ghost btn-accent glass" asp-area="" asp-page="/Movies/Index">RpMovie - List</a>
+                <a class="btn btn-ghost btn-accent glass m-3" asp-area="" asp-page="/Movies/Create">Add New Movie</a>
+            </div>
+        </nav>
+    </header>
+    <div class="flex-grow overflow-x-auto overflow-y-auto">
+        <main role="main" class="container mx-auto pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer footer-center bg-base-80 text-base-content rounded p-10">
+        <div class="container">
+            &copy; 2024 - RazorPagesMovies - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

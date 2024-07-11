@@ -1,0 +1,53 @@
+﻿@page
+@model RazorPagesMovies.Pages.Movies.IndexModel
+
+@{
+    ViewData["Title"] = "Movie List";
+}
+
+<h1 class="text-2xl font-bold mb-4">Movie List</h1>
+
+<form class="mb-4">
+    <div class="flex gap-2">
+        <select asp-for="MovieGenre" asp-items="Model.Genres" class="px-2 py-1 border rounded">
+            <option value="">All</option>
+        </select>
+        <input type="text" asp-for="SearchString" class="px-2 py-1 border rounded" placeholder="Search by title" />
+        <button type="submit" class="btn btn-outline btn-primary">Filter</button>
+    </div>
+</form>
+
+<div  class="overflow-auto max-h-96 border border-gray-200 p-4">
+    
+    <table class="w-full">
+        <thead>
+            <tr>
+                <th class="px-2 py-2">Image</th>
+                <th class="px-2 py-2">Title</th>
+                <th class="px-2 py-2">Release Date</th>
+                <th class="px-2 py-2">Genre</th>
+                <th class="px-2 py-2">Rating</th>
+                <th class="px-2 py-2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Movie)
+            {
+                <tr>
+                    <td class="px-4 py-2">
+                        <img src="@item.ImageUrl" alt="@item.Title" class="h-16 w-16 object-cover rounded" />
+                    </td>
+                    <td class="px-4 py-2">@item.Title</td>
+                    <td class="px-4 py-2">@item.ReleaseDate.ToShortDateString()</td>
+                    <td class="px-4 py-2">@item.Genre</td>
+                    <td class="px-4 py-2">@item.Rating</td>
+                    <td class="p-4" data-theme="cupcake">
+                        <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-outline btn-primary">Details</a> |
+                        <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-outline btn-primary">Edit</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-outline btn-primary">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
