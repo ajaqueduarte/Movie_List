@@ -11,5 +11,6 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>RazorPagesMovies.Data.RazorPagesMoviesContext</WebStackScaffolding_DbContextTypeFullName>
+    <NameOfLastUsedPublishProfile>C:\Users\jaque\OneDrive\Documents\Projects\RazorPagesMovies\RazorPagesMovies\.github\workflows\RazorPagesMovies20240711195100.yml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

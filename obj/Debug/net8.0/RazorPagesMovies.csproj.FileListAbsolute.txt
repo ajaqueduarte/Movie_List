@@ -252,3 +252,4 @@ C:\Users\jaque\OneDrive\Documents\Projects\RazorPagesMovies\RazorPagesMovies\obj
 C:\Users\jaque\OneDrive\Documents\Projects\RazorPagesMovies\RazorPagesMovies\obj\Debug\net8.0\RazorPag.F90A55BA.Up2Date
 C:\Users\jaque\OneDrive\Documents\Projects\RazorPagesMovies\RazorPagesMovies\bin\Debug\net8.0\package.json
 C:\Users\jaque\OneDrive\Documents\Projects\RazorPagesMovies\RazorPagesMovies\bin\Debug\net8.0\package-lock.json
+C:\Users\jaque\OneDrive\Documents\Projects\RazorPagesMovies\RazorPagesMovies\obj\Debug\net8.0\RazorPagesMovies.sourcelink.json
